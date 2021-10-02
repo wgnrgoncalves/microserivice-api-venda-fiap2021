@@ -17,9 +17,13 @@ app.use(function(req, res, next){
 });
 
 require('./models/product');
+require('./models/aluno');
 
 //rotas
 const productRouter = require('./routes/product-route');
 app.use('/products', productRouter);
+
+const alunoRouter = require('./routes/aluno-route');
+app.use('/aluno', alunoRouter);
 
 module.exports = app;
