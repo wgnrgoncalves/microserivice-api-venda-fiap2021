@@ -25,7 +25,7 @@ ValidationContract.prototype.hasMaxLen =(value, max, message) =>{
     }
 }
 
-ValidationContrLenact.prototype.isFixedLen = (value, len, message) =>{
+ValidationContract.prototype.isFixedLen = (value, len, message) =>{
     if(value.length != len){
         errors.push({message: message});
     }
