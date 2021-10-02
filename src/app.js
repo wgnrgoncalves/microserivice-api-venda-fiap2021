@@ -1,11 +1,11 @@
 const express = require('express');
-
+const mongoose = require('mongoose');
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-
+mongoose.connect('')
 
 
 app.use(function(req, res, next){
@@ -16,9 +16,9 @@ app.use(function(req, res, next){
 
 });
 
+require('./models/product');
 
 //rotas
-
 const productRouter = require('./routes/product-route');
 app.use('/products', productRouter);
 
