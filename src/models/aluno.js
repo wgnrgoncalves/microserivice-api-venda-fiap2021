@@ -32,4 +32,4 @@ const schema = new Schema({
     }
 });
 
-exports.module = mongoose.model('aluno', schema);
+exports.module = mongoose.model('Aluno', schema);

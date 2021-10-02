@@ -20,7 +20,7 @@ exports.post = async(req, res, next) =>{
 
     contract.hasMinLen(req.body.rm, 3, 'O RM deve ter pelo menos 3 caracteres');
     contract.hasMinLen(req.body.nome, 3, 'O nome deve ter pelo menos 3 caracteres');
-    contract.hasMinLen(req.body.turma, 3, 'A turma deve ter pelo menos 3 caracteres');
+    contract.hasMinLen(req.body.turma, 1, 'A turma deve ter pelo menos 1 caracteres');
     contract.isFixedLen(req.body.ano, 4, 'O ano deve possui 4 digitos');
 
     try {
